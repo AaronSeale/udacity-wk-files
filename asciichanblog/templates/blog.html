@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>/Aaron Blog/</title>
+  </head>
+  
+  <body>
+    <h1>/Aaron's Blog/</h1>
+    
+    <form method="post">
+        <label>
+          <div>title</div>
+          <input type="text" name="title" value="{{title}}">
+        </label>
+      
+        <label>
+          <div>post</div>
+          <textarea name="post"
+                    style="height: 200px; width: 600px;">{{post}}</textarea>
+          </label>
+      `<div class="error">{{error}}</div>
+        <br>
+        <input type="submit">
+    </form>
+    
+    <hr>
+    
+    {% for eric in jane %}
+      <div class="post">
+        <div class="post-title">{{eric.title}}</div>
+        <pre class="post-body">{{eric.post}}</pre>
+        <div class="post-date">{{eric.created}}</div>
+      </div>
+    {% endfor %}
+        
+    
+  </body>
+</html>
